@@ -149,10 +149,10 @@ console.log(`Task 3:`, baby.play());
 /* 
   TASK 4
   In your own words explain the four principles for the "this" keyword below:
-  1. 
-  2. 
-  3. 
-  4. 
+  1. Window Binding: If no other rule applies, "this" defaults to the window or the global object. Must give "this" context or we don't know what it is referencing.
+  2. Implicit Binding: Applies to objects with methods and says look to the left of the dot when invoked. 
+  3. Explicit Binding: Explicitly set "this" to point to a certain value using call, apply, or bind through a function invocation.
+  4. New Binding: Constructs a new object using "new" and "this" points to it.
 */
 
 
