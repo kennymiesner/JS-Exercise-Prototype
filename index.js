@@ -124,9 +124,26 @@ console.log(`Task 2: Post-Tank Fill:`, carTwo);
     - Besides the methods on Person.prototype, babies have the ability to `.play()`:
         + Should return a string "Playing with x", x being the favorite toy.
 */
-function Baby() {
-  
+
+// function Person(name, age) {
+//   this.name = name;
+//   this.age = age;
+//   this.stomach = [];
+// }
+
+function Baby(name, age, favoriteToy) {
+  Person.call(this, name, age); // Inherit from Person
+  this.favoriteToy = favoriteToy; // Assign specific attribute for the Baby
 }
+
+Baby.prototype = Object.create(Person.prototype); // Inheriting the Person's methods
+Baby.prototype.play = function() {
+  return `Playing with ${this.favoriteToy}`;
+}
+
+const baby = new Baby('Bob the Baby', '18 Months', 'Ball')
+console.log(baby);
+console.log(`Task 3:`, baby.play());
 
 
 /* 
